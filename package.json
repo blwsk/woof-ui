@@ -47,8 +47,8 @@
   "scripts": {
     "start": "node ./scripts/start.js",
     "build": "node ./scripts/build.js",
-    "clean": "rimraf lib build",
-    "prepublish": "npm run clean && babel src --config ./config/babel.prod.js --out-dir lib"
+    "clean": "rimraf build",
+    "prepublish": "npm run clean"
   },
   "eslintConfig": {
     "extends": "./config/eslint.js"
