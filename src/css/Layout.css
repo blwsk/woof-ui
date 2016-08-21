@@ -1,0 +1,56 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-bottom: 24px;
+}
+
+.col,
+.well {
+  max-width: 100%;
+  padding: 0 24px;
+}
+
+.well {
+  background: var(--white);
+  padding: 24px;
+}
+
+@media screen and (min-width: 400px) {
+  .col,
+  .well {
+    display: block;
+    min-width: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .col,
+  .well {
+    min-width: 50%;
+  }
+
+  .row {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .col,
+  .well {
+    min-width: 33.33%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .col,
+  .well {
+    min-width: 25%;
+  }
+}

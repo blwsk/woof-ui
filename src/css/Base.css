@@ -1,0 +1,8 @@
+br {
+
+}
+
+hr {
+  background: var(--gray);
+  height: 2px;
+}

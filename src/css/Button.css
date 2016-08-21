@@ -1,0 +1,23 @@
+.Button {
+  color: var(--white);
+  font-weight: var(--font-weight-400);
+
+  cursor: pointer;
+
+  font-size: 100%;
+
+  padding: 8px 12px;
+  margin: 0px 8px 0px 0px;
+}
+
+.Button-primary {
+  background: var(--blue);
+}
+
+.Button-confirm {
+  background: var(--green);
+}
+
+.Button-reject {
+  background: var(--red);
+}
