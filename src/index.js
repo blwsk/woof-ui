@@ -1,10 +1,14 @@
 import Woof from 'woof-dom';
-import {br, hr} from './Base';
-import {layout, row, col, well} from './Layout';
-import {h1, h2, h3, h4, h5, h6, p} from './Typography.js';
-import {Button} from './Button.js';
+import {
+  Base,
+  Layout,
+  Typography,
+  Button
+} from './src';
 
-import './css/index.css';
+const {br, hr} = Base;
+const {layout, row, col, well} = Layout;
+const {h1, h2, h3, h4, h5, h6, p} = Typography;
 
 const ButtonPrimary = Woof.y(Button);
 const ButtonConfirm = Woof.y(Button);
