@@ -1,6 +1,6 @@
 {
   "name": "woof-ui",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "./lib/src.js",
   "devDependencies": {
     "autoprefixer": "6.3.7",
