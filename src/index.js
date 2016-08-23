@@ -4,7 +4,7 @@ import {
   Layout,
   Typography,
   Button
-} from './src';
+} from './src.js';
 
 const {br, hr} = Base;
 const {layout, row, col, well} = Layout;

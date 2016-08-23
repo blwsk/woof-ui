@@ -1,3 +1,5 @@
+var custom = require('../custom/constants.js');
+
 // TODO: we can split this file into several files (pre-eject, post-eject, test)
 // and use those instead. This way we don't need to branch here.
 
@@ -52,7 +54,7 @@ if (isInCreateReactAppSource) {
     appHtml: resolveApp('index.html'),
     appFavicon: resolveApp('favicon.ico'),
     appPackageJson: resolveApp('package.json'),
-    appSrc: resolveApp('src'),
+    appSrc: resolveApp(custom.src),
     appNodeModules: resolveApp('node_modules'),
     ownNodeModules: resolveApp('node_modules')
   };
