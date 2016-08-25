@@ -8,7 +8,7 @@ export const layout = children => Woof.createElement('div', {
 
 export const row = width => children => Woof.createElement('div', {
   className: 'row',
-  style: width ? `max-width: ${width}px` : ''
+  style: width ? `max-width: 100%; width: ${width}px;` : ''
 }, children);
 
 export const col = children => Woof.createElement('div', {
