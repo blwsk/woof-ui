@@ -25,7 +25,8 @@ export class Button extends Woof.Component {
 
   render() {
     return button({
-      className: `Button ${this.getUse()}`
+      className: `Button ${this.getUse()}`,
+      onClick: this.props.onClick
     }, this.props.text);
   }
 }

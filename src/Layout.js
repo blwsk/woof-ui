@@ -1,20 +1,19 @@
-import Woof from 'woof-dom';
-
+import Core from './Core';
 import './css/Layout.css';
 
-export const layout = children => Woof.createElement('div', {
+export const layout = Core('div', {
   className: 'layout'
-}, children);
+});
 
-export const row = width => children => Woof.createElement('div', {
+export const row = width => Core('div', {
   className: 'row',
-  style: width ? `max-width: 100%; width: ${width}px;` : ''
-}, children);
+  style: width ? `max-width: 100%; width: ${width}px;` : '' 
+});
 
-export const col = children => Woof.createElement('div', {
+export const col = Core('div', {
   className: 'col'
-}, children);
+});
 
-export const well = children => Woof.createElement('div', {
+export const well = Core('div', {
   className: 'well'
-}, children);
+});

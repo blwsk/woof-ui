@@ -3,7 +3,8 @@ import {
   Base,
   Layout,
   Typography,
-  Button
+  Button,
+  Modal
 } from './src.js';
 
 const {br, hr} = Base;
@@ -15,6 +16,34 @@ const ButtonConfirm = Woof.y(Button);
 const ButtonReject = Woof.y(Button);
 
 class _App extends Woof.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    Modal(({onConfirm, onReject}) => {
+      return (
+        layout([
+          row(400)([
+            col([
+              well([
+                ButtonReject({
+                  text: 'Reject',
+                  use: 'reject',
+                  onClick: onConfirm.bind(null, 'hello')
+                })
+              ])
+            ])
+          ])
+        ])
+      );
+    }).then(res => {
+      console.log(res);
+    });
+  }
+
   render() {
     return layout([
       row(800)([
@@ -27,11 +56,8 @@ class _App extends Woof.Component {
             ButtonPrimary({text: 'Primary'}),
             ButtonConfirm({
               text: 'Confirm',
-              use: 'confirm'
-            }),
-            ButtonReject({
-              text: 'Reject',
-              use: 'reject'
+              use: 'confirm',
+              onClick: this.handleClick
             })
           ])
         ])
